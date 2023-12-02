@@ -1,4 +1,4 @@
-const { add, sub, getTodo } = require("../index");
+const { add, sub, getTodo, mul } = require("../index");
 describe(" Test case for index.js file", () => {
   test("test case for add function", () => {
     const result = add(1, 2);
@@ -34,5 +34,9 @@ describe(" Test case for index.js file", () => {
     } catch (error) {
       expect(error).toStrictEqual(response);
     }
+  });
+  test(" test case for mul function ", () => {
+    const result = mul(1, 2);
+    expect(result).toBe(2);
   });
 });
